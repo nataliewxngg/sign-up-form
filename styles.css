@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* banner styles */
+#banner {
+    background: url(assets/background.jpg) top left/100vh;
+    height: 100vh;
+    flex: 1;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#banner header {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: min(4vw, 4rem);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 7rem 0;
+    padding: 1rem; 
+}
+
+#banner header img { 
+    width: min(8vw, 8rem); 
+}
+
+#banner header h1 { 
+    font-family: "Fjalla One", serif;
+    margin: 0;
+}
+
+#banner a { color: white; }
+
+#banner footer {
+    font-size: 0.6rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* form styles */
+#sign-up {
+    /* background: yellow; */
+    flex: 2;
+}
