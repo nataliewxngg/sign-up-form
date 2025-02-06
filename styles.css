@@ -17,7 +17,7 @@ body {
 
 #banner header {
     background-color: rgba(0, 0, 0, 0.5);
-    font-size: min(4vw, 4rem);
+    font-size: min(3vw, 3rem);
     display: flex;
     gap: 0.5rem;
     justify-content: center;
@@ -27,7 +27,7 @@ body {
 }
 
 #banner header img { 
-    width: min(8vw, 8rem); 
+    width: min(7vw, 5rem); 
 }
 
 #banner header h1 { 
@@ -45,6 +45,57 @@ body {
 
 /* form styles */
 #sign-up {
-    /* background: yellow; */
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: whitesmoke;
+}
+
+#sign-up header {
+    width: 80%;
+    margin: 2rem;
+    font-size: 0.6rem;
+}
+
+fieldset {
+    margin: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: none;
+    /* add box shadow */
+}
+
+legend {
+    float: left;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+fieldset > div {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+form button {
+    margin: 1.8rem 2rem;
+    padding: 0.7rem 2.3rem;
+    border-radius: 0.6rem;
+    border: none;
+    background-color: #596D48;
+    font-weight: 600;
+    color: whitesmoke;
+    /* add box shadow */
+}
+
+footer {
+    margin: 0 2rem;
+}
+
+#sign-up a {
+    color: #596D48;
 }
