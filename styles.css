@@ -1,3 +1,8 @@
+/* general styles */
+:root {
+    
+}
+
 body {
     display: flex;
     justify-content: space-evenly;
@@ -16,24 +21,26 @@ body {
 }
 
 #banner header {
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: min(3vw, 2.2rem);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem; 
+    line-height: min(6vw, 5rem);
+
     display: flex;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
-    margin: 7rem 0;
-    padding: 1rem; 
+    margin: 20vh 0;
 }
 
 #banner svg { 
-    width: min(7vw, 5rem); 
-    height: auto;
+    height: 1lh; 
+    width: auto;
 }
 
 #banner header h1 { 
     font-family: "Fjalla One", serif;
     margin: 0;
+    font-size: 0.8lh;
 }
 
 #banner a { color: white; }
@@ -138,12 +145,12 @@ footer {
 
     /* banner styles */
     #banner { flex-basis: 70vh; }
-    #banner header { 
-        font-size: 2rem; 
+    #banner header {  
         margin: 4rem 0;
-        background: none; 
+        background: none;
     }
-    #banner svg { width: 4.4rem; }
+    #banner header h1 { font-size: 4rem; }
+    #banner svg { width: 4.4rem; height: auto; }
 
     /* form styles */
     #sign-up { padding-bottom: 2rem; }
