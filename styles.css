@@ -5,7 +5,7 @@ body {
 
 /* banner styles */
 #banner {
-    background: url(assets/background.jpg) top left/100vh;
+    background: url(assets/background.jpg) top left/cover no-repeat;
     height: 100vh;
     flex: 1;
     color: white;
@@ -17,7 +17,7 @@ body {
 
 #banner header {
     background-color: rgba(0, 0, 0, 0.5);
-    font-size: min(3vw, 3rem);
+    font-size: min(3vw, 2.2rem);
     display: flex;
     gap: 0.5rem;
     justify-content: center;
@@ -26,8 +26,9 @@ body {
     padding: 1rem; 
 }
 
-#banner header img { 
+#banner svg { 
     width: min(7vw, 5rem); 
+    height: auto;
 }
 
 #banner header h1 { 
@@ -44,6 +45,10 @@ body {
 }
 
 /* form styles */
+article {
+    width: 100%;
+}
+
 #sign-up {
     flex: 2;
     display: flex;
@@ -56,6 +61,10 @@ body {
     width: 80%;
     margin: 2rem;
     font-size: 0.6rem;
+}
+
+form {
+    width: 100%;
 }
 
 fieldset {
@@ -78,7 +87,29 @@ legend {
 fieldset > div {
     display: flex;
     justify-content: flex-start;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+fieldset p {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    color: rgb(48, 48, 48);
+}
+
+input {
+    border: 1px solid #e5e7eb;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    width: 14rem;
 }
 
 form button {
@@ -98,4 +129,25 @@ footer {
 
 #sign-up a {
     color: #596D48;
+}
+
+/* media queries */
+@media only screen and (max-width: 576px) { /* xs */
+    /* general styles */
+    body { flex-direction: column; }
+
+    /* banner styles */
+    #banner { flex-basis: 70vh; }
+    #banner header { 
+        font-size: 2rem; 
+        margin: 4rem 0;
+        background: none; 
+    }
+    #banner svg { width: 4.4rem; }
+
+    /* form styles */
+    #sign-up { padding-bottom: 2rem; }
+    fieldset { padding: 2rem 2rem; }
+
+    fieldset > div { gap: 0; }
 }
