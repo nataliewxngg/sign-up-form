@@ -1,6 +1,8 @@
 /* general styles */
 :root {
-    
+    --article-bg-color: rgb(250, 250, 250);
+    --article-margin: 3rem;
+    --accent-blue-color: #484f6d; 
 }
 
 body {
@@ -11,7 +13,7 @@ body {
 /* banner styles */
 #banner {
     background: url(assets/background.jpg) top left/cover no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     flex: 1;
     color: white;
 
@@ -52,43 +54,50 @@ body {
 }
 
 /* form styles */
-article {
-    width: 100%;
-}
+article { width: 100%; }
 
 #sign-up {
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: whitesmoke;
+    background-color: var(--article-bg-color);
 }
 
 #sign-up header {
-    width: 80%;
-    margin: 2rem;
-    font-size: 0.6rem;
+    width: 70%;
+    margin: 1.5rem 0 1.5rem var(--article-margin);
+    display: flex;
+    flex-direction: column;
 }
 
-form {
-    width: 100%;
+#sign-up h1 {
+    color: rgb(29, 29, 29);
+    font-size: 1.1rem;
+    font-weight: 600;
 }
+
+form { width: 100%; }
 
 fieldset {
     margin: 0;
-    padding: 1rem 2rem;
+    padding: 1.5rem var(--article-margin);
+    
     display: flex;
     flex-direction: column;
     background: white;
     border: none;
-    /* add box shadow */
+
+    /* Box shadows generated on https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 0px 4px 14px -6px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 4px 14px -6px rgba(0,0,0,0.5);
+    box-shadow: 0px 4px 14px -6px rgba(0,0,0,0.5);
 }
 
-legend {
-    float: left;
-    font-size: 1.2rem;
+fieldset > h1 {
+    color: rgb(48, 48, 48);
+    font-size: 1.1rem;
     margin-bottom: 1rem;
-    font-weight: bold;
 }
 
 fieldset > div {
@@ -96,6 +105,7 @@ fieldset > div {
     justify-content: flex-start;
     flex-wrap: wrap;
     column-gap: 5rem;
+    margin: -0.5rem 0;
 }
 
 fieldset p {
@@ -106,36 +116,46 @@ fieldset p {
 
 label {
     text-transform: uppercase;
-    font-weight: 500;
-    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 0.6rem;
     margin-bottom: 0.2rem;
     color: rgb(48, 48, 48);
 }
 
 input {
     border: 1px solid #e5e7eb;
+    border-radius: 0.3rem;
     padding: 0.3rem 0.5rem;
-    font-size: 0.8rem;
+    line-height: 1.3rem;
+    color: rgb(60, 60, 60);
     width: 14rem;
 }
 
 form button {
-    margin: 1.8rem 2rem;
+    margin: 2rem var(--article-margin);
     padding: 0.7rem 2.3rem;
     border-radius: 0.6rem;
     border: none;
-    background-color: #596D48;
+    background-color: var(--accent-blue-color);
     font-weight: 600;
-    color: whitesmoke;
-    /* add box shadow */
+    color: var(--article-bg-color);
+    transition: 0.8s;
+
+    /* Box shadows generated on https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.5);
 }
 
-footer {
-    margin: 0 2rem;
-}
+form button:hover { transform: scale(1.02); }
+
+footer { margin: -0.5rem 0 1.5rem var(--article-margin); }
 
 #sign-up a {
-    color: #596D48;
+    color: var(--accent-blue-color);
+    font-weight: 600;
+    text-decoration: none;
 }
 
 /* media queries */
