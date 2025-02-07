@@ -88,7 +88,7 @@ fieldset > div {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 5rem;
+    column-gap: 5rem;
 }
 
 fieldset p {
@@ -132,7 +132,7 @@ footer {
 }
 
 /* media queries */
-@media only screen and (max-width: 576px) { /* xs */
+@media only screen and (max-width: 768px) { /* xs: <600px */
     /* general styles */
     body { flex-direction: column; }
 
@@ -148,6 +148,12 @@ footer {
     /* form styles */
     #sign-up { padding-bottom: 2rem; }
     fieldset { padding: 2rem 2rem; }
+}
 
-    fieldset > div { gap: 0; }
+@media only screen and (min-width: 768px) { /* m */ 
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) { /* l */
+
 }
