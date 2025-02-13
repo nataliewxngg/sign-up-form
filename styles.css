@@ -132,6 +132,19 @@ input {
     width: 14rem;
 }
 
+input:invalid { border-color: rgb(200, 0, 0); }
+
+input:focus {
+    outline: none;
+
+    /* Box shadows generated on https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 5px 5px 10px -7px rgba(0,0,0,0.30);
+    -moz-box-shadow: 5px 5px 10px -7px rgba(0,0,0,0.30);
+    box-shadow: 5px 5px 10px -7px rgba(0,0,0,0.30);
+}
+
+input:valid:focus { border-color: var(--accent-blue-color); }
+
 form button {
     margin: 2rem var(--article-margin);
     padding: 0.7rem 2.3rem;
